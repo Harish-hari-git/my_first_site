@@ -12,95 +12,81 @@
   <header>
     <nav class="navbar">
       <div class="logo">StyleWear</div>
+
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
-        <li><a href="#categories">Categories</a></li>
         <li><a href="#products">Products</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
+      <div class="cart-box">
+        Cart: <span id="cart-count">0</span>
+      </div>
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero" id="home">
     <div class="hero-content">
       <h1>Fashion That Fits Your Style</h1>
-      <p>Discover trendy outfits for Men, Women, and Kids at StyleWear.</p>
-      <button onclick="shopNow()">Shop Now</button>
+      <p>Discover trendy outfits for Men, Women, and Kids.</p>
+      <button onclick="scrollToProducts()">Shop Now</button>
     </div>
   </section>
 
-  <!-- Categories -->
-  <section class="categories" id="categories">
-    <h2>Shop by Category</h2>
-    <div class="category-container">
-      <div class="category-card">
-        <h3>Men</h3>
-        <p>Shirts, T-Shirts, Jeans, Jackets and more.</p>
-      </div>
-      <div class="category-card">
-        <h3>Women</h3>
-        <p>Dresses, Tops, Kurtis, Jeans and more.</p>
-      </div>
-      <div class="category-card">
-        <h3>Kids</h3>
-        <p>Comfortable and stylish clothes for kids.</p>
+  <!-- Search + Filter -->
+  <section class="controls-section">
+    <h2>Our Products</h2>
+
+    <div class="controls">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search product..."
+        onkeyup="searchProducts()"
+      >
+
+      <div class="filter-buttons">
+        <button onclick="filterProducts('All')">All</button>
+        <button onclick="filterProducts('Men')">Men</button>
+        <button onclick="filterProducts('Women')">Women</button>
+        <button onclick="filterProducts('Kids')">Kids</button>
       </div>
     </div>
   </section>
 
-  <!-- Featured Products -->
-<section class="products" id="products">
-  <h2>Featured Products</h2>
-  <div class="product-container">
+  <!-- Products -->
+  <section class="products" id="products">
+    <div id="product-container" class="product-container"></div>
+  </section>
 
-    <div class="product-card">
-      <h3>Men's Casual Shirt</h3>
-      <p>Price: ₹999</p>
-      <button onclick="buyProduct(`Men's Casual Shirt`)">Buy Now</button>
+  <!-- Offer Section -->
+  <section class="offers">
+    <h2>Special Offers</h2>
+    <div class="offer-container">
+      <div class="offer-card">
+        <h3>Flat 30% Off</h3>
+        <p>On selected Men's collections.</p>
+      </div>
+      <div class="offer-card">
+        <h3>Buy 2 Get 1 Free</h3>
+        <p>On Kids wear this weekend.</p>
+      </div>
+      <div class="offer-card">
+        <h3>Free Delivery</h3>
+        <p>For orders above ₹1999.</p>
+      </div>
     </div>
-
-    <div class="product-card">
-      <h3>Women's Summer Dress</h3>
-      <p>Price: ₹1499</p>
-      <button onclick="buyProduct(`Women's Summer Dress`)">Buy Now</button>
-    </div>
-
-    <div class="product-card">
-      <h3>Kids Hoodie</h3>
-      <p>Price: ₹799</p>
-      <button onclick="buyProduct(`Kids Hoodie`)">Buy Now</button>
-    </div>
-
-    <div class="product-card">
-      <h3>Denim Jacket</h3>
-      <p>Price: ₹1999</p>
-      <button onclick="buyProduct(`Denim Jacket`)">Buy Now</button>
-    </div>
-
-    <div class="product-card">
-      <h3>Women's Kurti</h3>
-      <p>Price: ₹899</p>
-      <button onclick="buyProduct(`Women's Kurti`)">Buy Now</button>
-    </div>
-
-    <div class="product-card">
-      <h3>Men's Jeans</h3>
-      <p>Price: ₹1299</p>
-      <button onclick="buyProduct(`Men's Jeans`)">Buy Now</button>
-    </div>
-
-  </div>
-</section>
+  </section>
 
   <!-- About -->
   <section class="about" id="about">
     <h2>About StyleWear</h2>
     <p>
-      StyleWear is a modern clothing store website for fashion lovers.
-      We provide stylish and comfortable clothing for men, women, and kids.
-      Our mission is to bring quality fashion at affordable prices.
+      StyleWear is a modern clothing store website built for fashion lovers.
+      We provide stylish and affordable clothing for men, women, and kids.
+      Our goal is to make shopping simple, trendy, and comfortable.
     </p>
   </section>
 

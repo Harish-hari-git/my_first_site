@@ -3,14 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First Website</title>
+  <title>StyleWear Clothing</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Welcome to my website</h1>
-  <p>This is my first website using Git and GitHub.</p>
 
-  <button onclick="showMessage()">Click Me</button>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">StyleWear</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Fashion That Fits Your Style</h1>
+      <p>Discover trendy outfits for Men, Women, and Kids at StyleWear.</p>
+      <button onclick="shopNow()">Shop Now</button>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="categories" id="categories">
+    <h2>Shop by Category</h2>
+    <div class="category-container">
+      <div class="category-card">
+        <h3>Men</h3>
+        <p>Shirts, T-Shirts, Jeans, Jackets and more.</p>
+      </div>
+      <div class="category-card">
+        <h3>Women</h3>
+        <p>Dresses, Tops, Kurtis, Jeans and more.</p>
+      </div>
+      <div class="category-card">
+        <h3>Kids</h3>
+        <p>Comfortable and stylish clothes for kids.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+<section class="products" id="products">
+  <h2>Featured Products</h2>
+  <div class="product-container">
+
+    <div class="product-card">
+      <h3>Men's Casual Shirt</h3>
+      <p>Price: ₹999</p>
+      <button onclick="buyProduct(`Men's Casual Shirt`)">Buy Now</button>
+    </div>
+
+    <div class="product-card">
+      <h3>Women's Summer Dress</h3>
+      <p>Price: ₹1499</p>
+      <button onclick="buyProduct(`Women's Summer Dress`)">Buy Now</button>
+    </div>
+
+    <div class="product-card">
+      <h3>Kids Hoodie</h3>
+      <p>Price: ₹799</p>
+      <button onclick="buyProduct(`Kids Hoodie`)">Buy Now</button>
+    </div>
+
+    <div class="product-card">
+      <h3>Denim Jacket</h3>
+      <p>Price: ₹1999</p>
+      <button onclick="buyProduct(`Denim Jacket`)">Buy Now</button>
+    </div>
+
+    <div class="product-card">
+      <h3>Women's Kurti</h3>
+      <p>Price: ₹899</p>
+      <button onclick="buyProduct(`Women's Kurti`)">Buy Now</button>
+    </div>
+
+    <div class="product-card">
+      <h3>Men's Jeans</h3>
+      <p>Price: ₹1299</p>
+      <button onclick="buyProduct(`Men's Jeans`)">Buy Now</button>
+    </div>
+
+  </div>
+</section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <h2>About StyleWear</h2>
+    <p>
+      StyleWear is a modern clothing store website for fashion lovers.
+      We provide stylish and comfortable clothing for men, women, and kids.
+      Our mission is to bring quality fashion at affordable prices.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: stylewear@gmail.com</p>
+    <p>Phone: +91 98765 43210</p>
+    <p>Location: Bangalore, India</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 StyleWear. All rights reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
